@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { getPostsAxios, queryClient, TypePostSchema } from '../../api/Api';
 import './AxiosAndRouting.css'
 import { useQuery } from '@tanstack/react-query'
+import { Loader } from '../Loader/Loader';
 
 export function AxiosAndRouting() {
     const [database, setDatabase] = useState<TypePostSchema[]>([]);
@@ -13,21 +14,21 @@ export function AxiosAndRouting() {
     console.log(data);
 
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const posts = await getPostsAxios();
-                setDatabase(posts); // установка данных после получения и валидации
-            } catch (error) {
-                console.error('Error fetching posts:', error);
-            }
-        };
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         try {
+    //             const posts = await getPostsAxios();
+    //             setDatabase(posts); // установка данных после получения и валидации
+    //         } catch (error) {
+    //             console.error('Error fetching posts:', error);
+    //         }
+    //     };
 
-        fetchData();
-    }, []);
+    //     fetchData();
+    // }, []);
 
     if (isPending) {
-        return <span>Loading...</span>
+        return <Loader classList={['loader-center']}/>
     }
     if (isError) {
         return <span>Error: {error.message}</span>
