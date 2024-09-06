@@ -41,7 +41,8 @@
 .loader-item {
   width: 8px;
   height: 8px;
-  background-color: var(--primary);
+  /* background-color: var(--primary); */
+  background-color: red;
   border-radius: 50%;
   position: relative;
   bottom: 0;
