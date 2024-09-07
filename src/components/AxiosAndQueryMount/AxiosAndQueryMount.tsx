@@ -3,6 +3,7 @@ import { useQuery } from '@tanstack/react-query'
 import { getPostsAxios, queryClient } from '../../api/Api';
 import { Loader } from '../Loader';
 import './AxiosAndQueryMount.css'
+import { Link } from 'react-router-dom';
 
 export const AxiosAndQueryMount = () => {
     const [isButtonClicked, setIsButtonClicked] = useState(false);
@@ -46,11 +47,12 @@ export const AxiosAndQueryMount = () => {
 
             {showPosts && data && (
                 <div className="posts-container">
-                    {data.map(post => (
-                        <div key={post.id} className="post-card">
+                    {data.slice(0, 10).map(post => (  //показываем только 10 карточек
+                        // <Link key={post.id} className="post-card">
+                        <Link to={`/posts/${post.id}`} key={post.id} className="post-card">
                             <h3>{post.title}</h3>
                             <p>{post.body}</p>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             )}
