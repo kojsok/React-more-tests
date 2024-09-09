@@ -44,3 +44,9 @@ export const getPostsAxios = (): Promise<TypePostSchema[]> => {
     .then(response => PostsArraySchema.parse(response.data))
 }
 
+
+export const fetchPostById = async (id: string | undefined): Promise<TypePostSchema> => {
+    const { data } = await axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`);
+    return data;
+};
+
