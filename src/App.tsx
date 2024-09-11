@@ -5,6 +5,7 @@ import AxiosAndRouting from './components/axiosAndRouting/AxiosAndRouting';
 import { CardsAndFilter } from './components/CardsAndFilter/CardsAndFilter';
 import { Loader } from './components/Loader/Loader';
 import PostDetail from './components/PostDetail/PostDetail';
+import { SearchCardAndRouting } from './components/SearchCardAndRouting/SearchCardAndRouting';
 
 
 function App() {
@@ -24,20 +25,20 @@ function App() {
 
   return (
     <div className="app">
-      <Loader classList={['loader-centern']} />
+      {/* <Loader classList={['loader-centern']} /> */}
       {/* <AxiosAndRouting /> */}
       
 
       {/* <Loader classList={['loader-centern']} />
       <AxiosAndRouting /> */}
       {/* <AxiosAndQueryMount /> */}
-      {/* <Router>
+      <Router>
             <Routes>
-                <Route path="/" element={<AxiosAndQueryMount />} />
+                <Route path="/" element={<SearchCardAndRouting />} />
                 <Route path="/posts/:id" element={<PostDetail />} />
             </Routes>
-        </Router> */}
-        <CardsAndFilter cards={cards} />
+        </Router>
+        {/* <CardsAndFilter cards={cards} /> */}
       
     </div>
 
