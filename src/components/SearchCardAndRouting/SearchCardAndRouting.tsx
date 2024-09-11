@@ -1,11 +1,12 @@
 import { useQuery } from '@tanstack/react-query';
 import { getPostsAxios, queryClient } from '../../api/Api';
-import { Link, useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams, useNavigate } from 'react-router-dom';
 import { Loader } from '../Loader';
 import "./SearchCardAndRouting.css"
 import { ChangeEvent } from 'react';
 
 const SearchCardAndRouting = () => {
+    const navigate = useNavigate();
     const [searchParams, setSearchParams] = useSearchParams();
 
     //получаем обьект {потом на него посмотрим} из поисковой строки
@@ -49,6 +50,7 @@ const SearchCardAndRouting = () => {
                 onChange={handleSearchChange} //добавляем обработчик при вводе в инпут
                 placeholder="Search cards..."
             />
+            <button className="styled-button" onClick={() => navigate('/')}>Назад</button>
             <div className="posts-container">
                     {filteredCards && filteredCards.map(post => (  
                         <Link to={`/posts/${post.id}`} key={post.id} className="post-card">
