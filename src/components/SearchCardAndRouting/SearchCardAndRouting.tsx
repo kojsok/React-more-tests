@@ -4,6 +4,7 @@ import { Link, useSearchParams, useNavigate } from 'react-router-dom';
 import { Loader } from '../Loader';
 import "./SearchCardAndRouting.css"
 import { ChangeEvent } from 'react';
+import { LoaderAwesome } from '../LoaderAwesome/LoaderAwesome';
 
 const SearchCardAndRouting = () => {
     const navigate = useNavigate();
@@ -34,7 +35,8 @@ const SearchCardAndRouting = () => {
 
     if (isPending) {
         return <div>
-            <Loader classList={['loader-center']} />
+            {/* <Loader classList={['loader-center']} /> */}
+            <LoaderAwesome />
         </div>
     }
     if (isError) {

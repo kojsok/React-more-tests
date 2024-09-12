@@ -6,6 +6,7 @@ import { CardsAndFilter } from './components/CardsAndFilter/CardsAndFilter';
 import { Loader } from './components/Loader/Loader';
 import PostDetail from './components/PostDetail/PostDetail';
 import { SearchCardAndRouting } from './components/SearchCardAndRouting/SearchCardAndRouting';
+import { LoaderAwesome } from './components/LoaderAwesome/LoaderAwesome';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
       {/* <Loader classList={['loader-centern']} />
       <AxiosAndRouting /> */}
       {/* <AxiosAndQueryMount /> */}
+      {/* <LoaderAwesome /> */}
       <Router>
             <Routes>
                 <Route path="/" element={<SearchCardAndRouting />} />

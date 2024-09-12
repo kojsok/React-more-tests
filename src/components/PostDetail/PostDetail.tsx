@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { Loader } from '../Loader';
 import { fetchPostById, queryClient } from '../../api/Api';
+import { LoaderAwesome } from '../LoaderAwesome/LoaderAwesome';
 
 // const fetchPostById = async (id: string) => {
 //     const { data } = await axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`);
@@ -23,7 +24,8 @@ export const PostDetail = () => {
   
 
     if (isPending) {
-        return <Loader classList={['loader-center']} />;
+        return <LoaderAwesome />
+        // <Loader classList={['loader-center']} />;
     }
 
     if (isError) {
