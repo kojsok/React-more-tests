@@ -7,6 +7,7 @@ import { Loader } from './components/Loader/Loader';
 import PostDetail from './components/PostDetail/PostDetail';
 import { SearchCardAndRouting } from './components/SearchCardAndRouting/SearchCardAndRouting';
 import { LoaderAwesome } from './components/LoaderAwesome/LoaderAwesome';
+import { ButtonAwesome } from './components/ButtonAwesome/ButtonAwesome';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
       <AxiosAndRouting /> */}
       {/* <AxiosAndQueryMount /> */}
       {/* <LoaderAwesome /> */}
+      {/* <ButtonAwesome /> */}
       <Router>
             <Routes>
                 <Route path="/" element={<SearchCardAndRouting />} />

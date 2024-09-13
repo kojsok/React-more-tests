@@ -1,0 +1,91 @@
+/* :root {
+    --clr: #00ccff;  
+    --i: 1;         
+  } */
+
+ :root{ --clr:#00ccff; --i:1}
+
+ /* :root{ --clr:#22e622; --i:2} */
+
+.buttonawesome {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    /* width: 100%;
+    min-height: 300px; */
+    /* background: #0e1538; */
+}
+
+.linkbutton {
+    position: relative;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 20px;
+    transition: 1s;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.linkbutton:hover {
+    background: var(--clr);
+    box-shadow: 0 0 10px var(--clr),
+                0 0 30px var(--clr),
+                0 0 60px var(--clr),
+                0 0 100px var(--clr);
+}
+
+.linkbutton::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 400%;
+    background: var(--clr);
+    transition: 1s;
+    animation: animate 2s linear infinite;
+    animation-delay: calc(0.33s * var(--i));
+}
+
+.linkbutton:hover::before {
+    width: 120%;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.linkbutton::after {
+    content: "";
+    position: absolute;
+    background: #0e1538;
+    inset: 4px;
+    transition: 0.5s;
+}
+
+.linkbutton:hover::after {
+    background: var(--clr);
+}
+
+.linkbutton span {
+    position: relative;
+    z-index: 1;
+    font-size: 2em;
+    color: #fff;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    transition: 0.5s;
+}
+
+.linkbutton:hover span {
+    opacity: 1;
+    color: #0e1538;
+}
