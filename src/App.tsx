@@ -8,6 +8,7 @@ import PostDetail from './components/PostDetail/PostDetail';
 import { SearchCardAndRouting } from './components/SearchCardAndRouting/SearchCardAndRouting';
 import { LoaderAwesome } from './components/LoaderAwesome/LoaderAwesome';
 import { ButtonAwesome } from './components/ButtonAwesome/ButtonAwesome';
+import { FunctionalCompProps } from './components/FunctionalCompProps/FunctionalCompProps';
 
 
 function App() {
@@ -25,6 +26,13 @@ function App() {
     { id: 3, title: 'Card 3', description: 'This is the third card' },
   ];
 
+
+  //для функционального компонента FunctionalCompProps
+  const handleFormSubmit = (value: string) => {
+    console.log('Submitted value:', value);
+  };
+
+
   return (
     <div className="app">
       {/* <Loader classList={['loader-centern']} /> */}
@@ -36,6 +44,8 @@ function App() {
       {/* <AxiosAndQueryMount /> */}
       {/* <LoaderAwesome /> */}
       {/* <ButtonAwesome /> */}
+
+      <FunctionalCompProps title="My Form" onSubmit={handleFormSubmit} />
       <Router>
             <Routes>
                 <Route path="/" element={<SearchCardAndRouting />} />
