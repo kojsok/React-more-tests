@@ -47,7 +47,7 @@ function App() {
       {/* <ButtonAwesome /> */}
       <LoginFormAndUseReducer />
 
-      <FunctionalCompProps title="My Form" onSubmit={handleFormSubmit} />
+      {/* <FunctionalCompProps title="My Form" onSubmit={handleFormSubmit} /> */}
       <Router>
             <Routes>
                 <Route path="/" element={<SearchCardAndRouting />} />

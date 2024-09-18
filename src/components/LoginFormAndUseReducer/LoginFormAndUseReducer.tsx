@@ -8,7 +8,7 @@ interface State {
 }
 
 type Action =
-  | { type: 'SET_USERNAME'; payload: string }
+  | { type: 'SET_USERNAME'; payload: string } //user: {username: string, password: string} вместо пейлоад
   | { type: 'SET_PASSWORD'; payload: string }
   | { type: 'RESET_FORM' };
 
@@ -16,7 +16,7 @@ type Action =
 const formReducer = (state: State, action: Action): State => {
   switch (action.type) {
     case 'SET_USERNAME':
-      return { ...state, username: action.payload };
+      return { ...state, username: action.payload };  //user: {username: action.payload.username, password: action.payload.password}
     case 'SET_PASSWORD':
       return { ...state, password: action.payload };
     case 'RESET_FORM':
