@@ -8,11 +8,8 @@ import PostDetail from './components/PostDetail/PostDetail';
 import { SearchCardAndRouting } from './components/SearchCardAndRouting/SearchCardAndRouting';
 import { LoaderAwesome } from './components/LoaderAwesome/LoaderAwesome';
 import { ButtonAwesome } from './components/ButtonAwesome/ButtonAwesome';
-<<<<<<< HEAD
-import LoginFormAndUseReducer from './components/LoginFormAndUseReducer/LoginFormAndUseReducer';
-=======
 import { FunctionalCompProps } from './components/FunctionalCompProps/FunctionalCompProps';
->>>>>>> 65a58b243bf3fd08c1f12dc91c95f7debdde46f5
+import LoginFormAndUseReducer from './components/LoginFormAndUseReducer/LoginFormAndUseReducer';
 
 
 function App() {
@@ -48,12 +45,9 @@ function App() {
       {/* <AxiosAndQueryMount /> */}
       {/* <LoaderAwesome /> */}
       {/* <ButtonAwesome /> */}
-<<<<<<< HEAD
       <LoginFormAndUseReducer />
-=======
 
       <FunctionalCompProps title="My Form" onSubmit={handleFormSubmit} />
->>>>>>> 65a58b243bf3fd08c1f12dc91c95f7debdde46f5
       <Router>
             <Routes>
                 <Route path="/" element={<SearchCardAndRouting />} />
